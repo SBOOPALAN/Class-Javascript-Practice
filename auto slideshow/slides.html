@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../auto slideshow/slides.css">
+    <script src="../auto slideshow/Slides.js"></script>
+</head>
+<body>
+    
+
+    <h2>Automatic Slideshow</h2>
+      <p>Change imge every 2 Secinde:</p>
+
+
+<div class="slideshow-container">
+
+      <div class="MySlides fade">
+             <div class="numbertext">1 \ 3</div>
+             <img src="../imge pages/1.jpg" style="width: 100%;">
+             <div class="text">Caption Text</div>
+      </div>
+
+      
+      <div class="MySlides fade">
+        <div class="numbertext">2 \ 3</div>
+        <img src="../imge pages/2.jpeg" style="width: 100%;">
+        <div class="text">Caption Tow</div>
+      </div>
+     
+         
+      <div class="MySlides fade">
+        <div class="numbertext">3 \ 3</div>
+        <img src="../imge pages/3.jpg" style="width: 100%;">
+        <div class="text">Caption Three</div>
+      </div>
+
+    
+</div>
+<br>
+
+
+      <div style="text-align: center;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+      </div>
+
+    <script>
+   let slideIndex = 0;
+ShowSlides();
+
+ function ShowSlides() {
+    let i;
+
+    let Slides = document.getElementsByClassName("MySlides");
+    let dots = document.getElementsByClassName("dot");
+
+   for (i =0; i < Slides,length; i++){
+       Slides[i].style, display ="none";  
+   }
+
+   slideIndex++;
+   if (slideIndex > Slides.length){slideIndex = 1}
+   for (i = 0; i < dots.length; i++){
+       dots[i]. className = dots[i].className.replace("active","");  
+   }
+
+   Slides[slideIndex-1].style.display ="block";
+   dots[slideIndex-1].className +="active";
+   setTimeout(ShowSlides,2000); // change imge every 2 seconds
+    
+    
+ }
+    </script>  
+
+
+
+
+
+</body>
+</html>

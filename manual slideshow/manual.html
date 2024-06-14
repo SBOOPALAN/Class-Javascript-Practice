@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./manual.css">
+    
+</head>
+<body>
+    
+   <h2>Manual Slideshow</h2>
+
+    <div>
+       <img class="MySlides" src="../imge pages/11.webp" alt="no found">
+       <img class="MySlides" src="../imge pages/12.jpeg" alt="no found">
+       <img class="MySlides" src="../imge pages/14.jpg" alt="no found">
+       <img class="MySlides" src="../imge pages/15.jpg" alt="no found">
+
+
+       <button onclick="plusDives(-1)">&#10094;</button>
+       <button onclick="plusDives(1)">&#10095;</button>
+
+    </div>
+
+    <script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+
+function plusDivs(n){
+    showDivs(slideIndex += n);
+
+}
+
+
+function showDivs(n){
+    var i;
+    var x = document.getElementsByClassName("myslides");
+    if (n > x.length){slideIndex = 1}
+    if (n<1){slideIndex =x.length}
+    for (i = 0; i < x.length; i++){
+        x[i].style.display ="none";
+    }
+    x[slideIndex-1].style.display = "block"
+}
+</script>
+</body>
+</html>

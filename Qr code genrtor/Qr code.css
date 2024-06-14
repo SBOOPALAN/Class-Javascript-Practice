@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 50px;
+    text-shadow: 2px 2px 3px black;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+   margin-left: 260px;
+   color: brown;
+   font-size: 35px;
+   font-family: monospace;
+   text-shadow: 2px 2px 3px gold ;
+}
+
+input{
+    position: relative;
+    left: 420px;
+    top: 30px;
+}
